@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: hello-kubernetes-custom
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - port: 80
       targetPort: 8080
@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: hello-kubernetes-custom
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: hello-kubernetes-custom
