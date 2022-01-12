@@ -16,7 +16,7 @@ kind: Deployment
 metadata:
   name: hello-kubernetes-custom
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: hello-kubernetes-custom
@@ -33,8 +33,3 @@ spec:
           env:
             - name: MESSAGE
               value: hakona matata
-          resources:
-            limits:
-              cpu: 300m
-            requests:
-              cpu: 200m
